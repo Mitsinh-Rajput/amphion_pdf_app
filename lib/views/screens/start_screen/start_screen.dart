@@ -299,7 +299,6 @@ class IndexScreen extends StatelessWidget {
           ),
         ],
       ),
-      CategoryModel(title: "Esurge", image: Assets.imagesIndexIcon6, subCategories: []),
     ];
 
     // List<List<String>> og = [];
@@ -325,151 +324,153 @@ class IndexScreen extends StatelessWidget {
             height: size.height,
             color: Colors.white70,
             padding: const EdgeInsets.all(50),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                for (int i = 0; i < categories.length; i++)
-                  Builder(builder: (context) {
-                    var category = categories[i];
-                    return Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 6.0, vertical: 10.0),
-                      child: Stack(
-                        clipBehavior: Clip.none,
-                        children: [
-                          Container(
-                            height: 90,
-                            padding: const EdgeInsets.only(left: 10),
-                            child: Center(
-                              child: Container(
-                                height: 60,
-                                width: size.width * .83,
-                                decoration: BoxDecoration(
-                                  color: i == categories.length - 1 ? Colors.transparent : context.primaryColor,
-                                ),
-                                child: Row(
-                                  children: [
-                                    GestureDetector(
-                                      onTap: (i == categories.length - 1)
-                                          ? () {
-                                              // Navigator.push(context, getCustomRoute(child: const EsurgeScreen(), animate: false));
-                                              Navigator.push(
-                                                context,
-                                                getCustomRoute(
-                                                  child: SubCategoryScreenV2(
-                                                    index: allImages.length - 1,
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  for (int i = 0; i < categories.length; i++)
+                    Builder(builder: (context) {
+                      var category = categories[i];
+                      return Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 6.0, vertical: 10.0),
+                        child: Stack(
+                          clipBehavior: Clip.none,
+                          children: [
+                            Container(
+                              height: 90,
+                              padding: const EdgeInsets.only(left: 10),
+                              child: Center(
+                                child: Container(
+                                  height: 60,
+                                  width: size.width * .83,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: Colors.black.withOpacity(0.5),
+                                        offset: Offset(4, 4),
+                                        blurRadius: 4,
+                                      ),
+                                    ],
+                                  ),
+                                  child: Row(
+                                    children: [
+                                      GestureDetector(
+                                        onTap: (i == categories.length - 1)
+                                            ? () {
+                                                // Navigator.push(context, getCustomRoute(child: const EsurgeScreen(), animate: false));
+                                                Navigator.push(
+                                                  context,
+                                                  getCustomRoute(
+                                                    child: SubCategoryScreenV2(
+                                                      index: allImages.length - 1,
+                                                    ),
+                                                    animate: false,
                                                   ),
-                                                  animate: false,
-                                                ),
-                                              );
-                                            }
-                                          : null,
-                                      child: SizedBox(
-                                        width: size.width * .28,
-                                        child: Stack(
-                                          children: [
-                                            SvgPicture.asset(
-                                              Assets.svgsArrowJoined,
-                                              colorFilter: ColorFilter.mode(purpleColor, BlendMode.srcIn),
-                                              fit: BoxFit.fitWidth,
-                                              width: size.width * .28,
-                                            ),
-                                            if (i == categories.length - 1)
-                                              const Center(
-                                                child: Padding(
-                                                  padding: EdgeInsets.all(4.0),
-                                                  child: CustomImage(path: Assets.imagesEsurge),
-                                                ),
-                                              )
-                                            else
+                                                );
+                                              }
+                                            : null,
+                                        child: SizedBox(
+                                          width: size.width * .28,
+                                          child: Stack(
+                                            children: [
+                                              SvgPicture.asset(
+                                                Assets.svgsArrowJoined,
+                                                colorFilter: ColorFilter.mode(primaryColor, BlendMode.srcIn),
+                                                fit: BoxFit.fitWidth,
+                                                width: size.width * .28,
+                                              ),
                                               Padding(
                                                 padding: const EdgeInsets.only(left: 0),
                                                 child: Center(
                                                   child: Text(
                                                     category.title,
                                                     style: context.textTheme.bodyLarge!.copyWith(
-                                                      color: Colors.white,
+                                                      color: purpleColor,
                                                       fontSize: 19,
                                                       fontWeight: FontWeight.bold,
                                                     ),
                                                   ),
                                                 ),
                                               ),
-                                          ],
+                                            ],
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                    // for (String subCategory in item['sub_categories'])
-                                    for (int i = 0; i < category.subCategories.length; i++)
-                                      Builder(builder: (context) {
-                                        SubCategoryModel subCategory = category.subCategories[i];
-                                        return Row(
-                                          children: [
-                                            CustomButton(
-                                              type: ButtonType.tertiary,
-                                              onTap: () {
-                                                log("${subCategory.index}");
-                                                Navigator.push(
-                                                    context,
-                                                    getCustomRoute(
-                                                        child: SubCategoryScreenV2(
-                                                          index: subCategory.index ?? 0,
-                                                        ),
-                                                        animate: false));
-                                              },
-                                              child: Text(
-                                                subCategory.title,
-                                                style: context.textTheme.bodyLarge!.copyWith(
-                                                  color: purpleColor,
-                                                  fontSize: 20,
-                                                  fontWeight: FontWeight.bold,
+                                      // for (String subCategory in item['sub_categories'])
+                                      for (int i = 0; i < category.subCategories.length; i++)
+                                        Builder(builder: (context) {
+                                          SubCategoryModel subCategory = category.subCategories[i];
+                                          return Row(
+                                            children: [
+                                              CustomButton(
+                                                type: ButtonType.tertiary,
+                                                color: Colors.white,
+                                                onTap: () {
+                                                  log("${subCategory.index}");
+                                                  Navigator.push(
+                                                      context,
+                                                      getCustomRoute(
+                                                          child: SubCategoryScreenV2(
+                                                            index: subCategory.index ?? 0,
+                                                          ),
+                                                          animate: false));
+                                                },
+                                                child: Text(
+                                                  subCategory.title,
+                                                  style: context.textTheme.bodyLarge!.copyWith(
+                                                    color: purpleColor,
+                                                    fontSize: 20,
+                                                    fontWeight: FontWeight.bold,
+                                                  ),
                                                 ),
                                               ),
-                                            ),
-                                            if (i != category.subCategories.length - 1)
-                                              Padding(
-                                                padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                                                child: Container(
-                                                  width: .5,
-                                                  height: 20,
-                                                  color: purpleColor,
-                                                ),
-                                              )
-                                          ],
-                                        );
-                                      })
-                                  ],
+                                              if (i != category.subCategories.length - 1)
+                                                Padding(
+                                                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                                                  child: Container(
+                                                    width: .5,
+                                                    height: 20,
+                                                    color: Colors.black,
+                                                  ),
+                                                )
+                                            ],
+                                          );
+                                        })
+                                    ],
+                                  ),
                                 ),
                               ),
                             ),
-                          ),
-                          GestureDetector(
-                            onTap: (i == categories.length - 1)
-                                ? () {
-                                    // Navigator.push(context, getCustomRoute(child: const EsurgeScreen(), animate: false));
-                                    log('HERE');
-                                    Navigator.push(
-                                        context,
-                                        getCustomRoute(
-                                            child: SubCategoryScreenV2(
-                                              index: allImages.length - 1,
-                                            ),
-                                            animate: false));
-                                  }
-                                : null,
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(90),
-                              child: CustomImage(
-                                path: category.image,
-                                height: 90,
-                                width: 90,
+                            GestureDetector(
+                              onTap: (i == categories.length - 1)
+                                  ? () {
+                                      // Navigator.push(context, getCustomRoute(child: const EsurgeScreen(), animate: false));
+                                      log('HERE');
+                                      Navigator.push(
+                                          context,
+                                          getCustomRoute(
+                                              child: SubCategoryScreenV2(
+                                                index: allImages.length - 1,
+                                              ),
+                                              animate: false));
+                                    }
+                                  : null,
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(90),
+                                child: CustomImage(
+                                  path: category.image,
+                                  height: 90,
+                                  width: 90,
+                                ),
                               ),
                             ),
-                          ),
-                        ],
-                      ),
-                    );
-                  }),
-              ],
+                          ],
+                        ),
+                      );
+                    }),
+                ],
+              ),
             ),
           ),
           Positioned(

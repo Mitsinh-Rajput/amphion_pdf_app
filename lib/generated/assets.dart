@@ -97,7 +97,7 @@ class Assets {
   static const String new37a = 'assets/images/new/37a.png';
   static const String new38 = 'assets/images/new/38.png';
   static const String new39 = 'assets/images/new/39.png';
-  static const String new4 = 'assets/images/new/4.png';
+  static const String new4 = 'assets/images/new/4a.png';
   static const String new40 = 'assets/images/new/40.png';
   static const String new41 = 'assets/images/new/41.png';
   static const String new42 = 'assets/images/new/42.png';
