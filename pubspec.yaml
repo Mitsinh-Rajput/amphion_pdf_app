@@ -32,9 +32,10 @@ dependencies:
 #  custom_refresh_indicator: ^2.0.1
   flutter_svg: ^2.0.5
 #  flutter_svg_provider: ^1.0.3
+#  flutter_asset_generator: ^1.1.0
 
 flutter_assets_generator:
-  auto_detection: false
+  auto_detection: true
 
 
 dev_dependencies:
@@ -51,3 +52,17 @@ flutter:
     - assets/lotties/
     - assets/svgs/
     - assets/images/new/
+    - assets/images/AmphionIpadVA1/
+    - assets/images/AmphionIpadVA2/
+    - assets/images/AmphionIpadVA3/
+    - assets/images/AmphionPhysicianVAIpadFinalAW/
+    - assets/
+    - assets/audios/
+    - assets/videos/
+
+
+flutter_assets:
+  assets_path: assets/
+  output_path: lib/generated/
+  filename: assets.dart
+  field_prefix:

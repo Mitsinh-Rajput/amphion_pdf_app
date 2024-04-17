@@ -64,7 +64,7 @@ class IndexScreen extends StatelessWidget {
           SubCategoryModel(
             title: "SOL",
             icon: Assets.imagesSolitral,
-            index: 10,
+            index: 8,
             images: [
               // SubCategoryImage(image: Assets.imagesBphSol1, reference: Assets.imagesBphSol1Ref),
             ],
@@ -78,7 +78,7 @@ class IndexScreen extends StatelessWidget {
           SubCategoryModel(
             title: "MIR",
             icon: Assets.imagesMirago,
-            index: 11,
+            index: 9,
             images: [
               // SubCategoryImage(image: Assets.imagesBladderMir1, reference: Assets.imagesBladderMir1Ref),
               // SubCategoryImage(image: Assets.imagesBladderMir2, reference: Assets.imagesBladderMir2Ref),
@@ -87,7 +87,19 @@ class IndexScreen extends StatelessWidget {
           ),
           SubCategoryModel(
             title: "MIR S",
-            index: 14,
+            index: 12,
+            icon: Assets.imagesMiragos,
+            images: [
+              // SubCategoryImage(image: Assets.imagesBladderMirS1, reference: Assets.imagesBladderMirS1Ref),
+              // SubCategoryImage(image: Assets.imagesBladderMirS2, reference: Assets.imagesBladderMirS2Ref),
+              // SubCategoryImage(image: Assets.imagesBladderMirS3, reference: Assets.imagesBladderMirS3Ref),
+              // SubCategoryImage(image: Assets.imagesBladderMirS4),
+              // SubCategoryImage(image: Assets.imagesBladderMirS5, reference: Assets.imagesBladderMirS5Ref),
+            ],
+          ),
+          SubCategoryModel(
+            title: "TROP",
+            index: 17,
             icon: Assets.imagesMiragos,
             images: [
               // SubCategoryImage(image: Assets.imagesBladderMirS1, reference: Assets.imagesBladderMirS1Ref),
@@ -100,7 +112,7 @@ class IndexScreen extends StatelessWidget {
           SubCategoryModel(
             title: "DAR",
             icon: Assets.imagesDariten,
-            index: 19,
+            index: 18,
             images: [
               // SubCategoryImage(image: Assets.imagesBladderDar1, reference: Assets.imagesBladderDar1Ref),
             ],
@@ -108,18 +120,10 @@ class IndexScreen extends StatelessWidget {
           SubCategoryModel(
             title: "CYS",
             icon: Assets.imagesCystopen,
-            index: 20,
+            index: 19,
             images: [
               // SubCategoryImage(image: Assets.imagesBladderCys1, reference: Assets.imagesBladderCys1Ref),
               // SubCategoryImage(image: Assets.imagesBladderCys2, reference: Assets.imagesBladderCys2Ref),
-            ],
-          ),
-          SubCategoryModel(
-            title: "TROP XL",
-            icon: Assets.imagesTropanxl,
-            index: 22,
-            images: [
-              // SubCategoryImage(image: Assets.imagesBladderTropXr1, reference: Assets.imagesBladderTropXr1Ref, extra1: Assets.imagesBladderTropXr2),
             ],
           ),
         ],
@@ -129,9 +133,19 @@ class IndexScreen extends StatelessWidget {
         image: Assets.imagesIndexIcon3,
         subCategories: [
           SubCategoryModel(
+            title: "MOD",
+            icon: Assets.imagesCernos,
+            index: 22,
+            images: [
+              // SubCategoryImage(image: Assets.imagesAndrologyCer1, reference: Assets.imagesAndrologyCer1Ref),
+              // SubCategoryImage(image: Assets.imagesAndrologyCer2, reference: Assets.imagesAndrologyCer2Ref),
+              // SubCategoryImage(image: Assets.imagesAndrologyCer3, reference: Assets.imagesAndrologyCer3Ref),
+            ],
+          ),
+          SubCategoryModel(
             title: "CER",
             icon: Assets.imagesCernos,
-            index: 23,
+            index: 24,
             images: [
               // SubCategoryImage(image: Assets.imagesAndrologyCer1, reference: Assets.imagesAndrologyCer1Ref),
               // SubCategoryImage(image: Assets.imagesAndrologyCer2, reference: Assets.imagesAndrologyCer2Ref),
@@ -141,7 +155,7 @@ class IndexScreen extends StatelessWidget {
           SubCategoryModel(
             title: "DURL",
             icon: Assets.imagesDuralast,
-            index: 28,
+            index: 29,
             images: [
               // SubCategoryImage(image: Assets.imagesAndrologyDurp1, reference: Assets.imagesAndrologyDurp1Ref),
             ],
@@ -149,7 +163,7 @@ class IndexScreen extends StatelessWidget {
           SubCategoryModel(
             title: "DURP",
             icon: Assets.imagesDuraplus,
-            index: 29,
+            index: 31,
             images: [
               // SubCategoryImage(image: Assets.imagesAndrologyDurl1, reference: Assets.imagesAndrologyDurl1Ref),
               // SubCategoryImage(
@@ -169,7 +183,17 @@ class IndexScreen extends StatelessWidget {
           SubCategoryModel(
             title: "LUP",
             icon: Assets.imagesLupride,
-            index: 31,
+            index: 32,
+            images: [
+              // SubCategoryImage(image: Assets.imagesProstateLup0),
+              // SubCategoryImage(image: Assets.imagesProstateLup1, reference: Assets.imagesProstateLup1Ref),
+              // SubCategoryImage(image: Assets.imagesProstateLup2, reference: Assets.imagesProstateLup2Ref),
+            ],
+          ),
+          SubCategoryModel(
+            title: "ORG",
+            icon: Assets.imagesLupride,
+            index: 39,
             images: [
               // SubCategoryImage(image: Assets.imagesProstateLup0),
               // SubCategoryImage(image: Assets.imagesProstateLup1, reference: Assets.imagesProstateLup1Ref),
@@ -179,7 +203,7 @@ class IndexScreen extends StatelessWidget {
           SubCategoryModel(
             title: "DEGA",
             icon: Assets.imagesDegapride,
-            index: 34,
+            index: 44,
             images: [
               // SubCategoryImage(image: Assets.imagesProstateDega1),
               // SubCategoryImage(
@@ -195,7 +219,7 @@ class IndexScreen extends StatelessWidget {
           SubCategoryModel(
             title: "CAL",
             icon: Assets.imagesCaluran,
-            index: 38,
+            index: 47,
             images: [
               // SubCategoryImage(image: Assets.imagesProstateCal1),
             ],
@@ -203,7 +227,7 @@ class IndexScreen extends StatelessWidget {
           SubCategoryModel(
             title: "ZEL",
             icon: Assets.imagesZelgor,
-            index: 39,
+            index: 49,
             images: [
               // SubCategoryImage(image: Assets.imagesProstateZel1, reference: Assets.imagesProstateZel1Ref),
               // SubCategoryImage(image: Assets.imagesProstateZel2, reference: Assets.imagesProstateZel2Ref),
@@ -213,7 +237,7 @@ class IndexScreen extends StatelessWidget {
           SubCategoryModel(
             title: "ENZ",
             icon: Assets.imagesEnzyl,
-            index: 42,
+            index: 53,
             images: [
               // SubCategoryImage(image: Assets.imagesProstateEnz1),
               // SubCategoryImage(image: Assets.imagesProstateEnz2),
@@ -229,7 +253,7 @@ class IndexScreen extends StatelessWidget {
           SubCategoryModel(
             title: "CON I",
             icon: Assets.imagesContiflot,
-            index: 45,
+            index: 56,
             images: [
               // SubCategoryImage(image: Assets.imagesPhysician1, reference: Assets.imagesPhysician2),
               // SubCategoryImage(image: Assets.imagesPhysician3, reference: Assets.imagesPhysician4),
@@ -238,35 +262,33 @@ class IndexScreen extends StatelessWidget {
           SubCategoryModel(
             title: "TAM",
             icon: Assets.imagesTamdura,
-            index: 47,
+            index: 58,
             images: [
               // SubCategoryImage(image: Assets.imagesPhysician5, reference: Assets.imagesPhysician6),
             ],
           ),
           SubCategoryModel(
-            title: "MOD",
+            title: "MIR",
             icon: Assets.imagesModula,
-            index: 48,
+            index: 59,
             images: [
               // SubCategoryImage(image: Assets.imagesPhysician7, reference: Assets.imagesPhysician8),
               // SubCategoryImage(image: Assets.imagesPhysician9, reference: Assets.imagesPhysician10),
             ],
           ),
           SubCategoryModel(
-            title: "MIR",
-            icon: Assets.imagesMirago,
-            index: 50,
+            title: "MOD",
+            icon: Assets.imagesModula,
+            index: 63,
             images: [
-              // SubCategoryImage(image: Assets.imagesPhysician11),
-              // SubCategoryImage(image: Assets.imagesPhysician12, reference: Assets.imagesPhysician13),
-              // SubCategoryImage(image: Assets.imagesPhysician14, reference: Assets.imagesPhysician15),
-              // SubCategoryImage(image: Assets.imagesPhysician16, reference: Assets.imagesPhysician17),
+              // SubCategoryImage(image: Assets.imagesPhysician7, reference: Assets.imagesPhysician8),
+              // SubCategoryImage(image: Assets.imagesPhysician9, reference: Assets.imagesPhysician10),
             ],
           ),
           SubCategoryModel(
             title: "CER",
             icon: Assets.imagesCernos,
-            index: 54,
+            index: 65,
             images: [
               // SubCategoryImage(image: Assets.imagesPhysician18, reference: Assets.imagesPhysician19),
               // SubCategoryImage(image: Assets.imagesPhysician20, reference: Assets.imagesPhysician21),
@@ -275,7 +297,7 @@ class IndexScreen extends StatelessWidget {
           SubCategoryModel(
             title: "DURL",
             icon: Assets.imagesDuralast,
-            index: 58,
+            index: 69,
             images: [
               // SubCategoryImage(image: Assets.imagesPhysician22, reference: Assets.imagesPhysician23),
             ],
@@ -283,7 +305,7 @@ class IndexScreen extends StatelessWidget {
           SubCategoryModel(
             title: "DURP",
             icon: Assets.imagesDuraplus,
-            index: 59,
+            index: 70,
             images: [
               // SubCategoryImage(
               //   image: Assets.imagesPhysician24,
