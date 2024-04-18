@@ -1052,7 +1052,14 @@ List<SubCategoryImage> allImages = [
   SubCategoryImage(index: 68, subCategoryIndex: 4, image: Assets.imagesAmphionPhysicianVAIpadFinalAW22, reference: Assets.imagesAmphionPhysicianVAIpadFinalAW23),
   SubCategoryImage(index: 69, subCategoryIndex: 4, image: Assets.imagesAmphionPhysicianVAIpadFinalAW24, reference: Assets.imagesAmphionPhysicianVAIpadFinalAW25),
   SubCategoryImage(index: 70, subCategoryIndex: 4, image: Assets.imagesAmphionPhysicianVAIpadFinalAW26, reference: Assets.imagesAmphionPhysicianVAIpadFinalAW27),
-  SubCategoryImage(index: 71, subCategoryIndex: 4, image: Assets.imagesAmphionPhysicianVAIpadFinalAW28, reference: Assets.imagesAmphionPhysicianVAIpadFinalAW29),
+  SubCategoryImage(
+      index: 71,
+      subCategoryIndex: 4,
+      image: Assets.imagesAmphionPhysicianVAIpadFinalAW28,
+      reference: Assets.imagesAmphionPhysicianVAIpadFinalAW29,
+      title: 'DURP',
+      extra1: Assets.imagesAndrologyDurl3,
+      extra2: Assets.imagesAndrologyDurl4),
   // SubCategoryImage(
   //     index: 58, subCategoryIndex: 4, image: Assets.new118, title: 'DURP', reference: Assets.new119, extra1: Assets.imagesAndrologyDurl3, extra2: Assets.imagesAndrologyDurl4),
   // SubCategoryImage(index: 59, image: Assets.new120),
