@@ -345,7 +345,7 @@ class IndexScreen extends StatelessWidget {
             width: size.width,
             height: size.height,
             color: Colors.white70,
-            padding: const EdgeInsets.all(50),
+            padding: const EdgeInsets.symmetric(vertical: 50, horizontal: 20),
             child: SingleChildScrollView(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -354,13 +354,13 @@ class IndexScreen extends StatelessWidget {
                     Builder(builder: (context) {
                       var category = categories[i];
                       return Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 6.0, vertical: 10.0),
+                        padding: const EdgeInsets.symmetric(vertical: 10.0),
                         child: Stack(
                           clipBehavior: Clip.none,
                           children: [
                             Container(
                               height: 90,
-                              padding: const EdgeInsets.only(left: 10),
+                              // padding: const EdgeInsets.only(left: 10),
                               child: Center(
                                 child: Container(
                                   height: 60,
