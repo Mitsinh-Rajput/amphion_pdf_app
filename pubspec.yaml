@@ -70,4 +70,4 @@ flutter_assets:
 
 flutter_launcher_icons:
   android: "launcher_icon"
-  image_path: "assets/icon/cover_image.png"
+  image_path: "assets/images/cover_image.png"
