@@ -1,5 +1,6 @@
 import 'dart:developer';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_template/services/extensions.dart';
@@ -464,26 +465,30 @@ class IndexScreen extends StatelessWidget {
                                 ),
                               ),
                             ),
-                            GestureDetector(
-                              onTap: (i == categories.length - 1)
-                                  ? () {
-                                      // Navigator.push(context, getCustomRoute(child: const EsurgeScreen(), animate: false));
-                                      log('HERE');
-                                      Navigator.push(
-                                          context,
-                                          getCustomRoute(
-                                              child: SubCategoryScreenV2(
-                                                index: allImages.length - 1,
-                                              ),
-                                              animate: false));
-                                    }
-                                  : null,
-                              child: ClipRRect(
-                                // borderRadius: BorderRadius.circular(90),
-                                child: CustomImage(
-                                  path: category.image,
-                                  height: 100,
-                                  width: 100,
+                            Positioned(
+                              left: 0,
+                              top: -10,
+                              child: GestureDetector(
+                                onTap: (i == categories.length - 1)
+                                    ? () {
+                                        // Navigator.push(context, getCustomRoute(child: const EsurgeScreen(), animate: false));
+                                        // log('HERE');
+                                        // Navigator.push(
+                                        //     context,
+                                        //     getCustomRoute(
+                                        //         child: SubCategoryScreenV2(
+                                        //           index: allImages.length - 1,
+                                        //         ),
+                                        //         animate: false));
+                                      }
+                                    : null,
+                                child: ClipRRect(
+                                  // borderRadius: BorderRadius.circular(90),
+                                  child: CustomImage(
+                                    path: category.image,
+                                    height: 116,
+                                    width: 116,
+                                  ),
                                 ),
                               ),
                             ),
