@@ -1,6 +1,26 @@
 class Assets {
   Assets._();
   
+  /// Assets for images1
+  /// assets/images/1.png
+  static const String images1 = "assets/images/1.png";
+
+  /// Assets for images2
+  /// assets/images/2.png
+  static const String images2 = "assets/images/2.png";
+
+  /// Assets for images3
+  /// assets/images/3.png
+  static const String images3 = "assets/images/3.png";
+
+  /// Assets for images4
+  /// assets/images/4.png
+  static const String images4 = "assets/images/4.png";
+
+  /// Assets for images5
+  /// assets/images/5.png
+  static const String images5 = "assets/images/5.png";
+
   /// Assets for imagesAmphionIpadVA11
   /// assets/images/AmphionIpadVA1/1.png
   static const String imagesAmphionIpadVA11 = "assets/images/AmphionIpadVA1/1.png";
@@ -617,6 +637,14 @@ class Assets {
   /// assets/images/lupride.png
   static const String imagesLupride = "assets/images/lupride.png";
 
+  /// Assets for imagesLupride1
+  /// assets/images/lupride1.png
+  static const String imagesLupride1 = "assets/images/lupride1.png";
+
+  /// Assets for imagesLupride2
+  /// assets/images/lupride2.png
+  static const String imagesLupride2 = "assets/images/lupride2.png";
+
   /// Assets for imagesMirago
   /// assets/images/mirago.png
   static const String imagesMirago = "assets/images/mirago.png";
@@ -937,6 +965,10 @@ class Assets {
   /// assets/images/new/99.png
   static const String imagesNew99 = "assets/images/new/99.png";
 
+  /// Assets for imagesOrgonist
+  /// assets/images/orgonist.png
+  static const String imagesOrgonist = "assets/images/orgonist.png";
+
   /// Assets for imagesPlaceholder
   /// assets/images/placeholder.jpg
   static const String imagesPlaceholder = "assets/images/placeholder.jpg";
@@ -960,6 +992,10 @@ class Assets {
   /// Assets for imagesTamdura
   /// assets/images/tamdura.png
   static const String imagesTamdura = "assets/images/tamdura.png";
+
+  /// Assets for imagesTropan
+  /// assets/images/tropan.png
+  static const String imagesTropan = "assets/images/tropan.png";
 
   /// Assets for imagesTropanxl
   /// assets/images/tropanxl.png

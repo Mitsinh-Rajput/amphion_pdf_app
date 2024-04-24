@@ -21,7 +21,7 @@ class IndexScreen extends StatelessWidget {
     List<CategoryModel> categories = [
       CategoryModel(
         title: "BPH",
-        image: Assets.imagesIndexIcon1,
+        image: Assets.images1,
         subCategories: [
           SubCategoryModel(
             title: "CON T",
@@ -73,7 +73,7 @@ class IndexScreen extends StatelessWidget {
       ),
       CategoryModel(
         title: "BLADDER",
-        image: Assets.imagesIndexIcon2,
+        image: Assets.images2,
         subCategories: [
           SubCategoryModel(
             title: "MIR",
@@ -130,7 +130,7 @@ class IndexScreen extends StatelessWidget {
       ),
       CategoryModel(
         title: "ANDROLOGY",
-        image: Assets.imagesIndexIcon3,
+        image: Assets.images3,
         subCategories: [
           SubCategoryModel(
             title: "MOD",
@@ -178,7 +178,7 @@ class IndexScreen extends StatelessWidget {
       ),
       CategoryModel(
         title: "PROSTATE CANCER",
-        image: Assets.imagesIndexIcon4,
+        image: Assets.images4,
         subCategories: [
           SubCategoryModel(
             title: "LUP",
@@ -248,7 +248,7 @@ class IndexScreen extends StatelessWidget {
       ),
       CategoryModel(
         title: "PHYSICIAN VA",
-        image: Assets.imagesIndexIcon5,
+        image: Assets.images5,
         subCategories: [
           SubCategoryModel(
             title: "CON I",
@@ -479,11 +479,11 @@ class IndexScreen extends StatelessWidget {
                                     }
                                   : null,
                               child: ClipRRect(
-                                borderRadius: BorderRadius.circular(90),
+                                // borderRadius: BorderRadius.circular(90),
                                 child: CustomImage(
                                   path: category.image,
-                                  height: 90,
-                                  width: 90,
+                                  height: 100,
+                                  width: 100,
                                 ),
                               ),
                             ),

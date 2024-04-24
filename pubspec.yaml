@@ -33,6 +33,7 @@ dependencies:
   flutter_svg: ^2.0.5
 #  flutter_svg_provider: ^1.0.3
 #  flutter_asset_generator: ^1.1.0
+  flutter_launcher_icons: ^0.13.1
 
 flutter_assets_generator:
   auto_detection: true
@@ -66,3 +67,7 @@ flutter_assets:
   output_path: lib/generated/
   filename: assets.dart
   field_prefix:
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  image_path: "assets/icon/cover_image.png"
