@@ -530,6 +530,9 @@ class _SubCategoryScreenV2State extends State<SubCategoryScreenV2> {
                 onHorizontalDragEnd: (DragEndDetails? drag) {
                   log("${drag!.velocity}  $index");
                   if (drag.velocity.pixelsPerSecond.dx.isNegative) {
+                    if (index == allImages.length - 1) {
+                      Navigator.push(context, getCustomRoute(child: IndexScreen()));
+                    }
                     if (index != 61) {
                       pageController.animateToPage(index + 1, duration: const Duration(milliseconds: 100), curve: Curves.ease);
                     } else {
@@ -1001,7 +1004,14 @@ List<SubCategoryImage> allImages = [
   SubCategoryImage(index: 29, subCategoryIndex: 2, image: Assets.imagesAmphionIpadVA154, title: 'AndrologyCer', reference: Assets.imagesAmphionIpadVA155),
   SubCategoryImage(index: 30, subCategoryIndex: 2, image: Assets.imagesAmphionIpadVA156, title: 'DUR', reference: Assets.imagesAmphionIpadVA157),
   SubCategoryImage(index: 31, subCategoryIndex: 2, image: Assets.imagesAmphionIpadVA158, title: 'DUR', reference: Assets.imagesAmphionIpadVA159),
-  SubCategoryImage(index: 32, subCategoryIndex: 3, image: Assets.imagesAmphionIpadVA160, title: 'DURP', reference: Assets.imagesAmphionIpadVA161),
+  SubCategoryImage(
+      index: 32,
+      subCategoryIndex: 3,
+      image: Assets.imagesAmphionIpadVA160,
+      title: 'DURP',
+      reference: Assets.imagesAmphionIpadVA161,
+      extra1: Assets.imagesAndrologyDurl3,
+      extra2: Assets.imagesAndrologyDurl4),
 
   // /*-------------------------------------------------------------------------------------------------------------------*/
 

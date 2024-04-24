@@ -359,6 +359,33 @@ class IndexScreen extends StatelessWidget {
                         child: Stack(
                           clipBehavior: Clip.none,
                           children: [
+                            Positioned(
+                              left: 0,
+                              top: -10,
+                              child: GestureDetector(
+                                onTap: (i == categories.length - 1)
+                                    ? () {
+                                        // Navigator.push(context, getCustomRoute(child: const EsurgeScreen(), animate: false));
+                                        // log('HERE');
+                                        // Navigator.push(
+                                        //     context,
+                                        //     getCustomRoute(
+                                        //         child: SubCategoryScreenV2(
+                                        //           index: allImages.length - 1,
+                                        //         ),
+                                        //         animate: false));
+                                      }
+                                    : null,
+                                child: ClipRRect(
+                                  // borderRadius: BorderRadius.circular(90),
+                                  child: CustomImage(
+                                    path: category.image,
+                                    height: 116,
+                                    width: 116,
+                                  ),
+                                ),
+                              ),
+                            ),
                             Container(
                               height: 90,
                               // padding: const EdgeInsets.only(left: 10),
@@ -404,10 +431,12 @@ class IndexScreen extends StatelessWidget {
                                                 width: size.width * .28,
                                               ),
                                               Padding(
-                                                padding: const EdgeInsets.only(left: 0),
-                                                child: Center(
+                                                padding: const EdgeInsets.only(left: 50),
+                                                child: Align(
+                                                  alignment: Alignment.centerLeft,
                                                   child: Text(
                                                     category.title,
+                                                    textAlign: TextAlign.left,
                                                     style: context.textTheme.bodyLarge!.copyWith(
                                                       color: purpleColor,
                                                       fontSize: 19,
@@ -461,33 +490,6 @@ class IndexScreen extends StatelessWidget {
                                           );
                                         })
                                     ],
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Positioned(
-                              left: 0,
-                              top: -10,
-                              child: GestureDetector(
-                                onTap: (i == categories.length - 1)
-                                    ? () {
-                                        // Navigator.push(context, getCustomRoute(child: const EsurgeScreen(), animate: false));
-                                        // log('HERE');
-                                        // Navigator.push(
-                                        //     context,
-                                        //     getCustomRoute(
-                                        //         child: SubCategoryScreenV2(
-                                        //           index: allImages.length - 1,
-                                        //         ),
-                                        //         animate: false));
-                                      }
-                                    : null,
-                                child: ClipRRect(
-                                  // borderRadius: BorderRadius.circular(90),
-                                  child: CustomImage(
-                                    path: category.image,
-                                    height: 116,
-                                    width: 116,
                                   ),
                                 ),
                               ),
