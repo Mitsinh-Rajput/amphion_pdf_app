@@ -763,7 +763,7 @@ class _SubCategoryScreenV2State extends State<SubCategoryScreenV2> {
                               child: SvgPicture.asset(
                                 Assets.svgsContainerBg,
                                 height: size.height * .07,
-                                width: size.width * .7,
+                                width: size.width * .8,
                                 // color: Colors.black87,
                                 fit: BoxFit.fitWidth,
                                 colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
@@ -777,6 +777,7 @@ class _SubCategoryScreenV2State extends State<SubCategoryScreenV2> {
                                   child: Center(
                                     child: ListView.separated(
                                       itemCount: subData[allImages[pageController.page!.round()].subCategoryIndex!].length,
+                                      padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                                       physics: const NeverScrollableScrollPhysics(),
                                       scrollDirection: Axis.horizontal,
                                       shrinkWrap: true,
@@ -785,19 +786,21 @@ class _SubCategoryScreenV2State extends State<SubCategoryScreenV2> {
                                         // log(subData[allImages[pageController.page!.round()].subCategoryIndex!].length.toString());
                                         double width = (size.width * .65) / (subData[allImages[pageController.page!.round()].subCategoryIndex!].length);
                                         // log("${(width).toString()}  ${size.width * .65}");
-                                        return SizedBox(
-                                          width: width,
-                                          child: GestureDetector(
-                                            onTap: () {
-                                              log('${subData[allImages[pageController.page!.round()].subCategoryIndex!][index1]['index']}');
-                                              Navigator.pushReplacement(
-                                                context,
-                                                getCustomRoute(
-                                                    child: SubCategoryScreenV2(index: subData[allImages[pageController.page!.round()].subCategoryIndex!][index1]['index']),
-                                                    animate: false),
-                                              );
-                                            },
-                                            child: SubCategoryIcon(image: subData[allImages[pageController.page!.round()].subCategoryIndex!][index1]['image']),
+                                        return Center(
+                                          child: SizedBox(
+                                            width: width,
+                                            child: GestureDetector(
+                                              onTap: () {
+                                                log('${subData[allImages[pageController.page!.round()].subCategoryIndex!][index1]['index']}');
+                                                Navigator.pushReplacement(
+                                                  context,
+                                                  getCustomRoute(
+                                                      child: SubCategoryScreenV2(index: subData[allImages[pageController.page!.round()].subCategoryIndex!][index1]['index']),
+                                                      animate: false),
+                                                );
+                                              },
+                                              child: SubCategoryIcon(image: subData[allImages[pageController.page!.round()].subCategoryIndex!][index1]['image']),
+                                            ),
                                           ),
                                         );
                                       },
