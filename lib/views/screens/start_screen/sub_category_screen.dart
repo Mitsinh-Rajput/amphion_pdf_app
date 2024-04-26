@@ -533,7 +533,7 @@ class _SubCategoryScreenV2State extends State<SubCategoryScreenV2> {
                     if (index == allImages.length - 1) {
                       Navigator.push(context, getCustomRoute(child: IndexScreen()));
                     }
-                    if (index != 61) {
+                    if (index != 71) {
                       pageController.animateToPage(index + 1, duration: const Duration(milliseconds: 100), curve: Curves.ease);
                     } else {
                       log("index61");
