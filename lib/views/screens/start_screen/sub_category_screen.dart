@@ -777,29 +777,32 @@ class _SubCategoryScreenV2State extends State<SubCategoryScreenV2> {
                                   child: Center(
                                     child: ListView.separated(
                                       itemCount: subData[allImages[pageController.page!.round()].subCategoryIndex!].length,
-                                      padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                                      // padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                                       physics: const NeverScrollableScrollPhysics(),
                                       scrollDirection: Axis.horizontal,
                                       shrinkWrap: true,
                                       itemBuilder: (context, int index1) {
                                         log(allImages[pageController.page!.round()].index!.toString());
                                         // log(subData[allImages[pageController.page!.round()].subCategoryIndex!].length.toString());
-                                        double width = (size.width * .65) / (subData[allImages[pageController.page!.round()].subCategoryIndex!].length);
+                                        double width = (size.width * .50) / (subData[allImages[pageController.page!.round()].subCategoryIndex!].length);
                                         // log("${(width).toString()}  ${size.width * .65}");
-                                        return Center(
-                                          child: SizedBox(
-                                            width: width,
-                                            child: GestureDetector(
-                                              onTap: () {
-                                                log('${subData[allImages[pageController.page!.round()].subCategoryIndex!][index1]['index']}');
-                                                Navigator.pushReplacement(
-                                                  context,
-                                                  getCustomRoute(
-                                                      child: SubCategoryScreenV2(index: subData[allImages[pageController.page!.round()].subCategoryIndex!][index1]['index']),
-                                                      animate: false),
-                                                );
-                                              },
-                                              child: SubCategoryIcon(image: subData[allImages[pageController.page!.round()].subCategoryIndex!][index1]['image']),
+                                        return Padding(
+                                          padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                                          child: Center(
+                                            child: SizedBox(
+                                              width: width,
+                                              child: GestureDetector(
+                                                onTap: () {
+                                                  log('${subData[allImages[pageController.page!.round()].subCategoryIndex!][index1]['index']}');
+                                                  Navigator.pushReplacement(
+                                                    context,
+                                                    getCustomRoute(
+                                                        child: SubCategoryScreenV2(index: subData[allImages[pageController.page!.round()].subCategoryIndex!][index1]['index']),
+                                                        animate: false),
+                                                  );
+                                                },
+                                                child: SubCategoryIcon(image: subData[allImages[pageController.page!.round()].subCategoryIndex!][index1]['image']),
+                                              ),
                                             ),
                                           ),
                                         );
@@ -876,6 +879,7 @@ class SubCategoryIcon extends StatelessWidget {
   const SubCategoryIcon({Key? key, required this.image}) : super(key: key);
 
   final String image;
+
   @override
   Widget build(BuildContext context) {
     return CustomImage(path: image);
