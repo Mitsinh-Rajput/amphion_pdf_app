@@ -1,6 +1,5 @@
 import 'dart:developer';
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_template/services/extensions.dart';
@@ -355,44 +354,17 @@ class IndexScreen extends StatelessWidget {
                     Builder(builder: (context) {
                       var category = categories[i];
                       return Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 10.0),
+                        padding: const EdgeInsets.symmetric(vertical: 20.0),
                         child: Stack(
                           clipBehavior: Clip.none,
                           children: [
-                            Positioned(
-                              left: 0,
-                              top: -10,
-                              child: GestureDetector(
-                                onTap: (i == categories.length - 1)
-                                    ? () {
-                                        // Navigator.push(context, getCustomRoute(child: const EsurgeScreen(), animate: false));
-                                        // log('HERE');
-                                        // Navigator.push(
-                                        //     context,
-                                        //     getCustomRoute(
-                                        //         child: SubCategoryScreenV2(
-                                        //           index: allImages.length - 1,
-                                        //         ),
-                                        //         animate: false));
-                                      }
-                                    : null,
-                                child: ClipRRect(
-                                  // borderRadius: BorderRadius.circular(90),
-                                  child: CustomImage(
-                                    path: category.image,
-                                    height: 116,
-                                    width: 116,
-                                  ),
-                                ),
-                              ),
-                            ),
                             Container(
                               height: 90,
                               // padding: const EdgeInsets.only(left: 10),
                               child: Center(
                                 child: Container(
                                   height: 60,
-                                  width: size.width * .83,
+                                  width: size.width * .90,
                                   decoration: BoxDecoration(
                                     color: Colors.white,
                                     boxShadow: [
@@ -421,17 +393,17 @@ class IndexScreen extends StatelessWidget {
                                               }
                                             : null,
                                         child: SizedBox(
-                                          width: size.width * .28,
+                                          width: size.width * .30,
                                           child: Stack(
                                             children: [
                                               SvgPicture.asset(
                                                 Assets.svgsArrowJoined,
                                                 colorFilter: ColorFilter.mode(primaryColor, BlendMode.srcIn),
                                                 fit: BoxFit.fitWidth,
-                                                width: size.width * .28,
+                                                width: size.width * .30,
                                               ),
                                               Padding(
-                                                padding: const EdgeInsets.only(left: 50),
+                                                padding: const EdgeInsets.only(left: 75),
                                                 child: Align(
                                                   alignment: Alignment.centerLeft,
                                                   child: Text(
@@ -490,6 +462,33 @@ class IndexScreen extends StatelessWidget {
                                           );
                                         })
                                     ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Positioned(
+                              left: 0,
+                              top: -10,
+                              child: GestureDetector(
+                                onTap: (i == categories.length - 1)
+                                    ? () {
+                                        // Navigator.push(context, getCustomRoute(child: const EsurgeScreen(), animate: false));
+                                        // log('HERE');
+                                        // Navigator.push(
+                                        //     context,
+                                        //     getCustomRoute(
+                                        //         child: SubCategoryScreenV2(
+                                        //           index: allImages.length - 1,
+                                        //         ),
+                                        //         animate: false));
+                                      }
+                                    : null,
+                                child: ClipRRect(
+                                  // borderRadius: BorderRadius.circular(90),
+                                  child: CustomImage(
+                                    path: category.image,
+                                    height: 116,
+                                    width: 116,
                                   ),
                                 ),
                               ),
