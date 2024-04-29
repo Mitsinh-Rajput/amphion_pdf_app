@@ -899,23 +899,20 @@ class _SubCategoryScreenV2State extends State<SubCategoryScreenV2> {
                                         // log(subData[allImages[pageController.page!.round()].subCategoryIndex!].length.toString());
                                         double width = (size.width * .50) / (subData[allImages[pageController.page!.round()].subCategoryIndex!].length);
                                         // log("${(width).toString()}  ${size.width * .65}");
-                                        return Padding(
-                                          padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                                          child: Center(
-                                            child: SizedBox(
-                                              width: width,
-                                              child: GestureDetector(
-                                                onTap: () {
-                                                  log('${subData[allImages[pageController.page!.round()].subCategoryIndex!][index1]['index']}');
-                                                  Navigator.pushReplacement(
-                                                    context,
-                                                    getCustomRoute(
-                                                        child: SubCategoryScreenV2(index: subData[allImages[pageController.page!.round()].subCategoryIndex!][index1]['index']),
-                                                        animate: false),
-                                                  );
-                                                },
-                                                child: SubCategoryIcon(image: subData[allImages[pageController.page!.round()].subCategoryIndex!][index1]['image']),
-                                              ),
+                                        return Center(
+                                          child: SizedBox(
+                                            width: width,
+                                            child: GestureDetector(
+                                              onTap: () {
+                                                log('${subData[allImages[pageController.page!.round()].subCategoryIndex!][index1]['index']}');
+                                                Navigator.pushReplacement(
+                                                  context,
+                                                  getCustomRoute(
+                                                      child: SubCategoryScreenV2(index: subData[allImages[pageController.page!.round()].subCategoryIndex!][index1]['index']),
+                                                      animate: false),
+                                                );
+                                              },
+                                              child: SubCategoryIcon(image: subData[allImages[pageController.page!.round()].subCategoryIndex!][index1]['image']),
                                             ),
                                           ),
                                         );
@@ -995,7 +992,11 @@ class SubCategoryIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomImage(path: image);
+    return CustomImage(
+      path: image,
+      height: 50,
+      width: 100,
+    );
   }
 }
 //BladderTropXr
