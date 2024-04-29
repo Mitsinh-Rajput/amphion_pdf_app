@@ -381,15 +381,15 @@ class IndexScreen extends StatelessWidget {
                                         onTap: (i == categories.length - 1)
                                             ? () {
                                                 // Navigator.push(context, getCustomRoute(child: const EsurgeScreen(), animate: false));
-                                                Navigator.push(
-                                                  context,
-                                                  getCustomRoute(
-                                                    child: SubCategoryScreenV2(
-                                                      index: allImages.length - 1,
-                                                    ),
-                                                    animate: false,
-                                                  ),
-                                                );
+                                                // Navigator.push(
+                                                //   context,
+                                                //   getCustomRoute(
+                                                //     child: SubCategoryScreenV2(
+                                                //       index: allImages.length - 1,
+                                                //     ),
+                                                //     animate: false,
+                                                //   ),
+                                                // );
                                               }
                                             : null,
                                         child: SizedBox(
