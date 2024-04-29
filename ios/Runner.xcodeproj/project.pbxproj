@@ -363,7 +363,7 @@
 				DEVELOPMENT_TEAM = 7RVJ2QR8F9;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Runner/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Amphion VA 2023";
+				INFOPLIST_KEY_CFBundleDisplayName = "Amphion VA 2024";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -496,7 +496,7 @@
 				DEVELOPMENT_TEAM = 7RVJ2QR8F9;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Runner/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Amphion VA 2023";
+				INFOPLIST_KEY_CFBundleDisplayName = "Amphion VA 2024";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -521,7 +521,7 @@
 				DEVELOPMENT_TEAM = 7RVJ2QR8F9;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Runner/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Amphion VA 2023";
+				INFOPLIST_KEY_CFBundleDisplayName = "Amphion VA 2024";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
