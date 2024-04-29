@@ -380,12 +380,22 @@ class _SubCategoryScreenV2State extends State<SubCategoryScreenV2> {
   late PageController pageController;
   bool viewSubCategories = false;
 
+  double opacity = 0.0;
+
   @override
   void initState() {
     super.initState();
     pageController = PageController(initialPage: widget.index);
     Timer.run(() {
       setState(() {});
+    });
+    Timer.periodic(Duration(milliseconds: 200), (timer) {
+      setState(() {
+        opacity = opacity + 0.3;
+        if (opacity >= 1) {
+          opacity = 0;
+        }
+      });
     });
   }
 
@@ -531,9 +541,9 @@ class _SubCategoryScreenV2State extends State<SubCategoryScreenV2> {
                   log("${drag!.velocity}  $index");
                   if (drag.velocity.pixelsPerSecond.dx.isNegative) {
                     if (index == allImages.length - 1) {
-                      Navigator.push(context, getCustomRoute(child: IndexScreen()));
+                      Navigator.push(context, getCustomRoute(child: const IndexScreen()));
                     }
-                    if (index != 61) {
+                    if (index != 71) {
                       pageController.animateToPage(index + 1, duration: const Duration(milliseconds: 100), curve: Curves.ease);
                     } else {
                       log("index61");
@@ -688,6 +698,109 @@ class _SubCategoryScreenV2State extends State<SubCategoryScreenV2> {
                                   ),
                                 ),
                               ),
+                            );
+                          }
+                          if (allImages[index].title == 'ProstateLup1') {
+                            return Stack(
+                              children: [
+                                Opacity(
+                                  opacity: opacity,
+                                  child: CustomImage(
+                                    path: Assets.imagesAmphionIpadVA21a,
+                                    width: size.width,
+                                    height: size.height,
+                                    fit: BoxFit.fill,
+                                  ),
+                                ),
+                                AnimatedSwitcher(
+                                    duration: Duration(minutes: 300),
+                                    child: FadeTransition(
+                                      opacity: Tween<double>(begin: 0.0, end: 1.0).animate(
+                                        CurvedAnimation(
+                                          parent: AlwaysStoppedAnimation(1),
+                                          curve: Curves.easeInOut,
+                                        ),
+                                      ),
+                                      child: CustomImage(
+                                        path: Assets.imagesAmphionIpadVA21a,
+                                        width: size.width,
+                                        height: size.height,
+                                        fit: BoxFit.fill,
+                                      ),
+                                    )),
+                                Positioned(
+                                    top: 50,
+                                    left: size.width * 0.33,
+                                    child: GestureDetector(
+                                      onTap: () async {
+                                        await pageController.animateToPage((pageController.page! + 1).round(), duration: const Duration(milliseconds: 50), curve: Curves.ease);
+                                      },
+                                      child: Container(
+                                        height: 220,
+                                        width: 300,
+                                        color: Colors.transparent,
+                                      ),
+                                    )),
+                                Positioned(
+                                    bottom: 50,
+                                    left: 180,
+                                    child: GestureDetector(
+                                      onTap: () async {
+                                        await pageController.animateToPage((pageController.page! + 1).round(), duration: const Duration(milliseconds: 50), curve: Curves.ease);
+                                      },
+                                      child: Container(
+                                        height: 200,
+                                        width: 200,
+                                        color: Colors.transparent,
+                                      ),
+                                    )),
+                                Positioned(
+                                    top: size.height * 0.45,
+                                    left: size.width * 0.5,
+                                    child: GestureDetector(
+                                      onTap: () async {
+                                        await pageController.animateToPage((pageController.page! + 1).round(), duration: const Duration(milliseconds: 50), curve: Curves.ease);
+                                      },
+                                      child: Container(
+                                        height: 200,
+                                        width: 250,
+                                        color: Colors.transparent,
+                                      ),
+                                    )),
+                                Positioned(
+                                    top: size.height * 0.27,
+                                    right: 50,
+                                    child: GestureDetector(
+                                      onTap: () async {
+                                        await pageController.animateToPage((pageController.page! + 1).round(), duration: const Duration(milliseconds: 50), curve: Curves.ease);
+                                      },
+                                      child: Container(
+                                        height: 200,
+                                        width: 200,
+                                        color: Colors.transparent,
+                                      ),
+                                    )),
+                              ],
+                            );
+                          }
+                          if (allImages[index].title == 'ProstateLup3') {
+                            return Stack(
+                              children: [
+                                Positioned(
+                                    right: 100,
+                                    bottom: 50,
+                                    // left: size.width * 0.33,
+                                    child: GestureDetector(
+                                      onTap: () async {
+                                        await pageController.animateToPage((pageController.page! + 1).round(), duration: const Duration(milliseconds: 50), curve: Curves.ease);
+                                      },
+                                      child: Container(
+                                        height: 380,
+                                        width: 500,
+                                        color: Colors.transparent,
+                                      ),
+                                    )),
+                              ],
                             );
                           }
                           return const SizedBox.shrink();
@@ -1013,7 +1126,7 @@ List<SubCategoryImage> allImages = [
   SubCategoryImage(index: 31, subCategoryIndex: 2, image: Assets.imagesAmphionIpadVA158, title: 'DUR', reference: Assets.imagesAmphionIpadVA159),
   SubCategoryImage(
       index: 32,
-      subCategoryIndex: 3,
+      subCategoryIndex: 2,
       image: Assets.imagesAmphionIpadVA160,
       title: 'DURP',
       reference: Assets.imagesAmphionIpadVA161,
@@ -1022,9 +1135,9 @@ List<SubCategoryImage> allImages = [
 
   // /*-------------------------------------------------------------------------------------------------------------------*/
 
-  SubCategoryImage(index: 33, subCategoryIndex: 3, image: Assets.imagesAmphionIpadVA21, title: 'ProstateLup'),
+  SubCategoryImage(index: 33, subCategoryIndex: 3, image: Assets.imagesAmphionIpadVA21, title: 'ProstateLup1'),
   SubCategoryImage(index: 34, subCategoryIndex: 3, image: Assets.imagesAmphionIpadVA22, title: 'ProstateLup'),
-  SubCategoryImage(index: 35, subCategoryIndex: 3, image: Assets.imagesAmphionIpadVA23, title: 'ProstateLup'),
+  SubCategoryImage(index: 35, subCategoryIndex: 3, image: Assets.imagesAmphionIpadVA23, title: 'ProstateLup3'),
   SubCategoryImage(index: 36, subCategoryIndex: 3, image: Assets.imagesAmphionIpadVA24, title: 'ProstateLup'),
   SubCategoryImage(index: 37, subCategoryIndex: 3, image: Assets.imagesAmphionIpadVA25, title: 'ProstateLup', reference: Assets.imagesAmphionIpadVA26),
   SubCategoryImage(index: 38, subCategoryIndex: 3, image: Assets.imagesAmphionIpadVA27, title: 'ProstateCan'),
@@ -1049,7 +1162,7 @@ List<SubCategoryImage> allImages = [
 
   // /*-------------------------------------------------------------------------------------------------------------------*/
 
-  SubCategoryImage(index: 56, subCategoryIndex: 4, image: Assets.imagesAmphionPhysicianVAIpadFinalAW1),
+  SubCategoryImage(index: 56, subCategoryIndex: 4, image: Assets.imagesAmphionPhysicianVAIpadFinalAW1, reference: Assets.imagesAmphionPhysicianVAIpadFinalAW1a),
   //
   SubCategoryImage(index: 57, subCategoryIndex: 4, image: Assets.imagesAmphionPhysicianVAIpadFinalAW2, reference: Assets.imagesAmphionPhysicianVAIpadFinalAW3),
   //

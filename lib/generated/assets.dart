@@ -1,6 +1,6 @@
 class Assets {
   Assets._();
-  
+
   /// Assets for images1
   /// assets/images/1.png
   static const String images1 = "assets/images/1.png";
@@ -269,6 +269,10 @@ class Assets {
   /// assets/images/AmphionIpadVA2/1.png
   static const String imagesAmphionIpadVA21 = "assets/images/AmphionIpadVA2/1.png";
 
+  /// Assets for imagesAmphionIpadVA21a
+  /// assets/images/AmphionIpadVA2/1a.png
+  static const String imagesAmphionIpadVA21a = "assets/images/AmphionIpadVA2/1a.png";
+
   /// Assets for imagesAmphionIpadVA210
   /// assets/images/AmphionIpadVA2/10.png
   static const String imagesAmphionIpadVA210 = "assets/images/AmphionIpadVA2/10.png";
@@ -424,6 +428,10 @@ class Assets {
   /// Assets for imagesAmphionPhysicianVAIpadFinalAW1
   /// assets/images/AmphionPhysicianVAIpadFinalAW/1.png
   static const String imagesAmphionPhysicianVAIpadFinalAW1 = "assets/images/AmphionPhysicianVAIpadFinalAW/1.png";
+
+  /// Assets for imagesAmphionPhysicianVAIpadFinalAW1a
+  /// assets/images/AmphionPhysicianVAIpadFinalAW/1a.png
+  static const String imagesAmphionPhysicianVAIpadFinalAW1a = "assets/images/AmphionPhysicianVAIpadFinalAW/1a.png";
 
   /// Assets for imagesAmphionPhysicianVAIpadFinalAW10
   /// assets/images/AmphionPhysicianVAIpadFinalAW/10.png
@@ -1021,4 +1029,3 @@ class Assets {
   /// assets/svgs/container_bg.svg
   static const String svgsContainerBg = "assets/svgs/container_bg.svg";
 }
-
