@@ -884,43 +884,39 @@ class _SubCategoryScreenV2State extends State<SubCategoryScreenV2> {
                             ),
                             if (pageController.hasClients)
                               Center(
-                                child: SizedBox(
-                                  height: size.height * .07 - 6,
-                                  width: size.width * .65 - 6,
-                                  child: Center(
-                                    child: ListView.separated(
-                                      itemCount: subData[allImages[pageController.page!.round()].subCategoryIndex!].length,
-                                      // padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-                                      physics: const NeverScrollableScrollPhysics(),
-                                      scrollDirection: Axis.horizontal,
-                                      shrinkWrap: true,
-                                      itemBuilder: (context, int index1) {
-                                        log(allImages[pageController.page!.round()].index!.toString());
-                                        // log(subData[allImages[pageController.page!.round()].subCategoryIndex!].length.toString());
-                                        double width = (size.width * .50) / (subData[allImages[pageController.page!.round()].subCategoryIndex!].length);
-                                        // log("${(width).toString()}  ${size.width * .65}");
-                                        return Center(
-                                          child: SizedBox(
-                                            width: width,
-                                            child: GestureDetector(
-                                              onTap: () {
-                                                log('${subData[allImages[pageController.page!.round()].subCategoryIndex!][index1]['index']}');
-                                                Navigator.pushReplacement(
-                                                  context,
-                                                  getCustomRoute(
-                                                      child: SubCategoryScreenV2(index: subData[allImages[pageController.page!.round()].subCategoryIndex!][index1]['index']),
-                                                      animate: false),
-                                                );
-                                              },
-                                              child: SubCategoryIcon(image: subData[allImages[pageController.page!.round()].subCategoryIndex!][index1]['image']),
-                                            ),
+                                child: Center(
+                                  child: ListView.separated(
+                                    itemCount: subData[allImages[pageController.page!.round()].subCategoryIndex!].length,
+                                    padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                                    // physics: const NeverScrollableScrollPhysics(),
+                                    scrollDirection: Axis.horizontal,
+                                    shrinkWrap: true,
+                                    itemBuilder: (context, int index1) {
+                                      log(allImages[pageController.page!.round()].index!.toString());
+                                      // log(subData[allImages[pageController.page!.round()].subCategoryIndex!].length.toString());
+                                      double width = (size.width * .50) / (subData[allImages[pageController.page!.round()].subCategoryIndex!].length);
+                                      // log("${(width).toString()}  ${size.width * .65}");
+                                      return Center(
+                                        child: SizedBox(
+                                          width: width * 1.3,
+                                          child: GestureDetector(
+                                            onTap: () {
+                                              log('${subData[allImages[pageController.page!.round()].subCategoryIndex!][index1]['index']}');
+                                              Navigator.pushReplacement(
+                                                context,
+                                                getCustomRoute(
+                                                    child: SubCategoryScreenV2(index: subData[allImages[pageController.page!.round()].subCategoryIndex!][index1]['index']),
+                                                    animate: false),
+                                              );
+                                            },
+                                            child: SubCategoryIcon(image: subData[allImages[pageController.page!.round()].subCategoryIndex!][index1]['image']),
                                           ),
-                                        );
-                                      },
-                                      separatorBuilder: (BuildContext context, int index) {
-                                        return Center(child: Container(height: 30, width: 1, color: Colors.black45));
-                                      },
-                                    ),
+                                        ),
+                                      );
+                                    },
+                                    separatorBuilder: (BuildContext context, int index) {
+                                      return Center(child: Container(height: 30, width: 1, color: Colors.black45));
+                                    },
                                   ),
                                 ),
                               ),
@@ -992,10 +988,12 @@ class SubCategoryIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomImage(
-      path: image,
-      height: 50,
-      width: 100,
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 10.0),
+      child: CustomImage(
+        path: image,
+        height: 30,
+      ),
     );
   }
 }
