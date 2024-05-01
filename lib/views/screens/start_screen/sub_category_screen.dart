@@ -547,12 +547,12 @@ class _SubCategoryScreenV2State extends State<SubCategoryScreenV2> {
                     if (index != 71) {
                       if (index == 34) {
                         pageController.animateToPage(index + 2, duration: const Duration(milliseconds: 100), curve: Curves.ease);
+                      } else if (index == 51) {
+                        pageController.animateToPage(index + 2, duration: const Duration(milliseconds: 100), curve: Curves.ease);
+                      } else if (index == 35) {
+                      } else if (index == 52) {
                       } else {
-                        if (index == 51) {
-                          pageController.animateToPage(index + 2, duration: const Duration(milliseconds: 100), curve: Curves.ease);
-                        } else {
-                          pageController.animateToPage(index + 1, duration: const Duration(milliseconds: 100), curve: Curves.ease);
-                        }
+                        pageController.animateToPage(index + 1, duration: const Duration(milliseconds: 100), curve: Curves.ease);
                       }
                     } else {
                       log("index61");
@@ -561,12 +561,12 @@ class _SubCategoryScreenV2State extends State<SubCategoryScreenV2> {
                     if (index != 0) {
                       if (index == 36) {
                         pageController.animateToPage(index - 2, duration: const Duration(milliseconds: 100), curve: Curves.ease);
+                      } else if (index == 53) {
+                        pageController.animateToPage(index - 2, duration: const Duration(milliseconds: 100), curve: Curves.ease);
+                      } else if (index == 35) {
+                      } else if (index == 52) {
                       } else {
-                        if (index == 53) {
-                          pageController.animateToPage(index - 2, duration: const Duration(milliseconds: 100), curve: Curves.ease);
-                        } else {
-                          pageController.animateToPage(index - 1, duration: const Duration(milliseconds: 100), curve: Curves.ease);
-                        }
+                        pageController.animateToPage(index - 1, duration: const Duration(milliseconds: 100), curve: Curves.ease);
                       }
 
                       // pageController.animateToPage(index - 1, duration: const Duration(milliseconds: 100), curve: Curves.ease);
