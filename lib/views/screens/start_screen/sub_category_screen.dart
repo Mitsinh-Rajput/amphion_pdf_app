@@ -783,6 +783,37 @@ class _SubCategoryScreenV2State extends State<SubCategoryScreenV2> {
                               ],
                             );
                           }
+                          if (allImages[index].title == 'ZEL1') {
+                            return Positioned(
+                                bottom: 20,
+                                right: 60,
+                                child: GestureDetector(
+                                  onTap: () async {
+                                    await pageController.animateToPage((pageController.page! + 1).round(), duration: const Duration(milliseconds: 50), curve: Curves.ease);
+                                  },
+                                  child: Container(
+                                    height: 200,
+                                    width: 300,
+                                    color: Colors.transparent,
+                                  ),
+                                ));
+                          }
+                          if (allImages[index].title == 'ZEL15') {
+                            return Positioned(
+                                top: 20,
+                                right: 60,
+                                child: GestureDetector(
+                                  onTap: () async {
+                                    await pageController.animateToPage((pageController.page! - 1).round(), duration: const Duration(milliseconds: 50), curve: Curves.ease);
+                                  },
+                                  child: Container(
+                                    height: 200,
+                                    width: 300,
+                                    color: Colors.transparent,
+                                  ),
+                                ));
+                          }
+
                           if (allImages[index].title == 'ProstateLup3') {
                             return Stack(
                               children: [
@@ -797,6 +828,26 @@ class _SubCategoryScreenV2State extends State<SubCategoryScreenV2> {
                                       child: Container(
                                         height: 380,
                                         width: 500,
+                                        color: Colors.transparent,
+                                      ),
+                                    )),
+                              ],
+                            );
+                          }
+                          if (allImages[index].title == 'ProstateLup55') {
+                            return Stack(
+                              children: [
+                                Positioned(
+                                    right: 10,
+                                    bottom: 300,
+                                    // left: size.width * 0.33,
+                                    child: GestureDetector(
+                                      onTap: () async {
+                                        await pageController.animateToPage((pageController.page! - 1).round(), duration: const Duration(milliseconds: 50), curve: Curves.ease);
+                                      },
+                                      child: Container(
+                                        height: 200,
+                                        width: 200,
                                         color: Colors.transparent,
                                       ),
                                     )),
@@ -1137,7 +1188,7 @@ List<SubCategoryImage> allImages = [
   SubCategoryImage(index: 33, subCategoryIndex: 3, image: Assets.imagesAmphionIpadVA21, title: 'ProstateLup1'),
   SubCategoryImage(index: 34, subCategoryIndex: 3, image: Assets.imagesAmphionIpadVA22, title: 'ProstateLup'),
   SubCategoryImage(index: 35, subCategoryIndex: 3, image: Assets.imagesAmphionIpadVA23, title: 'ProstateLup3'),
-  SubCategoryImage(index: 36, subCategoryIndex: 3, image: Assets.imagesAmphionIpadVA24, title: 'ProstateLup'),
+  SubCategoryImage(index: 36, subCategoryIndex: 3, image: Assets.imagesAmphionIpadVA24, title: 'ProstateLup55'),
   SubCategoryImage(index: 37, subCategoryIndex: 3, image: Assets.imagesAmphionIpadVA25, title: 'ProstateLup', reference: Assets.imagesAmphionIpadVA26),
   SubCategoryImage(index: 38, subCategoryIndex: 3, image: Assets.imagesAmphionIpadVA27, title: 'ProstateCan'),
   SubCategoryImage(index: 39, subCategoryIndex: 3, image: Assets.imagesAmphionIpadVA28, title: 'ProstateCan', reference: Assets.imagesAmphionIpadVA29),
@@ -1152,9 +1203,9 @@ List<SubCategoryImage> allImages = [
   SubCategoryImage(index: 48, subCategoryIndex: 3, image: Assets.imagesAmphionIpadVA37, title: 'CAL'),
   SubCategoryImage(index: 49, subCategoryIndex: 3, image: Assets.imagesAmphionIpadVA38, title: 'CAL'),
   SubCategoryImage(index: 50, subCategoryIndex: 3, image: Assets.imagesAmphionIpadVA39, title: 'CAL', reference: Assets.imagesAmphionIpadVA310),
-  SubCategoryImage(index: 51, subCategoryIndex: 3, image: Assets.imagesAmphionIpadVA311, title: 'CAL', reference: Assets.imagesAmphionIpadVA312),
-  SubCategoryImage(index: 52, subCategoryIndex: 3, image: Assets.imagesAmphionIpadVA313, title: 'CAL', reference: Assets.imagesAmphionIpadVA314),
-  SubCategoryImage(index: 53, subCategoryIndex: 3, image: Assets.imagesAmphionIpadVA315, title: 'CAL', reference: Assets.imagesAmphionIpadVA316),
+  SubCategoryImage(index: 51, subCategoryIndex: 3, image: Assets.imagesAmphionIpadVA311, title: 'ZEL', reference: Assets.imagesAmphionIpadVA312),
+  SubCategoryImage(index: 52, subCategoryIndex: 3, image: Assets.imagesAmphionIpadVA313, title: 'ZEL1', reference: Assets.imagesAmphionIpadVA314),
+  SubCategoryImage(index: 53, subCategoryIndex: 3, image: Assets.imagesAmphionIpadVA315, title: 'ZEL15', reference: Assets.imagesAmphionIpadVA316),
   SubCategoryImage(index: 54, subCategoryIndex: 3, image: Assets.imagesAmphionIpadVA317, title: 'CAL'),
   SubCategoryImage(index: 55, subCategoryIndex: 3, image: Assets.imagesAmphionIpadVA318, title: 'CAL'),
   SubCategoryImage(index: 55, subCategoryIndex: 3, image: Assets.imagesAmphionIpadVA319, title: 'CAL', reference: Assets.imagesAmphionIpadVA320),
