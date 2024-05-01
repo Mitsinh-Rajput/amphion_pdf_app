@@ -543,14 +543,34 @@ class _SubCategoryScreenV2State extends State<SubCategoryScreenV2> {
                     if (index == allImages.length - 1) {
                       Navigator.push(context, getCustomRoute(child: const IndexScreen()));
                     }
+
                     if (index != 71) {
-                      pageController.animateToPage(index + 1, duration: const Duration(milliseconds: 100), curve: Curves.ease);
+                      if (index == 34) {
+                        pageController.animateToPage(index + 2, duration: const Duration(milliseconds: 100), curve: Curves.ease);
+                      } else {
+                        pageController.animateToPage(index + 1, duration: const Duration(milliseconds: 100), curve: Curves.ease);
+                      }
+                      if (index == 51) {
+                        pageController.animateToPage(index + 2, duration: const Duration(milliseconds: 100), curve: Curves.ease);
+                      } else {
+                        pageController.animateToPage(index + 1, duration: const Duration(milliseconds: 100), curve: Curves.ease);
+                      }
                     } else {
                       log("index61");
                     }
                   } else {
                     if (index != 0) {
-                      pageController.animateToPage(index - 1, duration: const Duration(milliseconds: 100), curve: Curves.ease);
+                      if (index == 34) {
+                        pageController.animateToPage(index - 2, duration: const Duration(milliseconds: 100), curve: Curves.ease);
+                      } else {
+                        pageController.animateToPage(index - 1, duration: const Duration(milliseconds: 100), curve: Curves.ease);
+                      }
+                      if (index == 53) {
+                        pageController.animateToPage(index - 2, duration: const Duration(milliseconds: 100), curve: Curves.ease);
+                      } else {
+                        pageController.animateToPage(index - 1, duration: const Duration(milliseconds: 100), curve: Curves.ease);
+                      }
+                      // pageController.animateToPage(index - 1, duration: const Duration(milliseconds: 100), curve: Curves.ease);
                     }
                   }
                 },
